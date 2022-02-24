@@ -1,11 +1,11 @@
-<div class="device-os">
-  <div class="icon size-32">
-    <mat-icon class="type-icon">{{ DeviceTypeIcons[type] }}</mat-icon>
-    <mat-icon
-      *ngIf="type !== DeviceType.Unknown && DeviceOsIcons[os]"
-      class="os-icon"
-      [svgIcon]="DeviceOsIcons[os]"
-    ></mat-icon>
-  </div>
-  <div *ngIf="name" class="name">{{ name }}</div>
+<div class="icon-name" *ngIf="name; else icon">
+  <ng-container *ngTemplateOutlet="icon"></ng-container>
+  <div class="name">{{ name }}</div>
 </div>
+
+<ng-template #icon>
+  <div class="icon" [ngClass]="[ 'device-' + type, 'os-' + os ]">
+    <img *ngIf="type" class="device" [src]="'/assets/@firestitch/device/devices/' + type + '.svg'">
+    <img class="os" [src]="'/assets/@firestitch/device/os/' + (os || 'unknown') + '.svg'">
+  </div>  
+</ng-template>

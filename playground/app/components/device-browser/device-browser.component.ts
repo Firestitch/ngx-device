@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { DeviceBrowser } from '@firestitch/device';
+import { DeviceBrowsers } from '@firestitch/device';
 
 @Component({
   selector: 'device-browser',
@@ -9,7 +9,7 @@ import { DeviceBrowser } from '@firestitch/device';
 })
 export class DeviceBrowserComponent {
 
-  public DeviceBrowser = DeviceBrowser;
+  public DeviceBrowsers = DeviceBrowsers;
 
   constructor() { }
 }

@@ -1,8 +1,13 @@
-<div class="browser">
+<ng-container *ngIf="name; else icon">
+  <div class="icon-name">
+    <ng-container *ngTemplateOutlet="icon"></ng-container>
+    <div *ngIf="name" class="name">{{ name }}</div>
+  </div>
+</ng-container>
+
+<ng-template #icon>
   <img
     *ngIf="type"
     class="icon"
-    src="/assets/@firestitch/device/browsers/browser_{{ type }}.svg"
-    >
-  <div *ngIf="name" class="name">{{ name }}</div>
-</div>
+    src="/assets/@firestitch/device/browsers/browser_{{ type }}.svg">
+</ng-template>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { DeviceType, DeviceOs } from '@firestitch/device';
+import { DeviceType, DeviceOs, DeviceOss } from '@firestitch/device';
 
 @Component({
   selector: 'device-os',
@@ -11,6 +11,7 @@ export class DeviceOsComponent {
 
   public DeviceType = DeviceType;
   public DeviceOs = DeviceOs;
+  public DeviceOss = DeviceOss;
 
   constructor() { }
 }

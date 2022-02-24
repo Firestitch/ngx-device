@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Input, Component } from '@angular/core';
+import { DeviceBrowsers } from '../../consts';
 
 import { DeviceBrowser } from '../../enums/device-browser.enum';
 
@@ -18,8 +19,19 @@ export class FsDeviceBrowserComponent {
   public version: string = null;
 
   @Input()
-  public name: string = null;
+  public set showName(showName: boolean) {
+    if(showName) {
+      const deviceBrowser = DeviceBrowsers
+        .find((deviceBrowser) => {
+          return deviceBrowser.type === this.type;
+        });
+      this.name = deviceBrowser?.name;
+    }
+  };
 
-  constructor() { }
+  public name;
+
+  constructor() {
+   }
 
 }

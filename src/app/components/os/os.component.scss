@@ -1,29 +1,31 @@
-.device-os {
+.icon-name {
   display: flex;
   flex-direction: row;
   align-items: center;
-  .icon {
-    margin-right: 10px;
-    position: relative;
-    .os-icon {
-      position: absolute;
-    }
-    &.size-32 {
-      .type-icon {
-        width: 32px;
-        height: 32px;
-        font-size: 32px;
-        line-height: 32px;
-      }
-      
-      .os-icon {
-        left: 9px;
-        top: 6px;
-        width: 12px;
-        height: 12px;
-        font-size: 12px;
-        line-height: 12px;
-      }
-    }
+}
+
+
+.icon {
+  position: relative;
+
+  &.device-mobile .os,
+  &.device-tablet .os {
+    top: 41%;
   }
+
+  img.device {
+    width: 24px;
+  }
+
+  img.os {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 31%;
+  }
+}
+
+.name {
+  margin-left: 10px;
 }

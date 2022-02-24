@@ -5,4 +5,5 @@ export enum DeviceOs {
   Ios = 'ios',
   Mac = 'mac',
   Darwin = 'darwin',
+  Unknown = 'unknown',
 }

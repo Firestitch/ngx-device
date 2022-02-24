@@ -22,12 +22,11 @@ export class FsDeviceOsComponent {
   public os: DeviceOs = null;
 
   @Input()
-  public name: string = null;
+  public showName = false;
 
   public DeviceOsIcons = DeviceOsIcons;
   public DeviceTypeIcons = DeviceTypeIcons;
   public DeviceType = DeviceType;
-
-  constructor() { }
+  public name;
 
 }

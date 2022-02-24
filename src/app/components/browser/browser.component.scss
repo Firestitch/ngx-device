@@ -1,9 +1,13 @@
-.browser {
+.icon-name {
   display: flex;
   flex-direction: row;
   align-items: center;
-  .icon {
-    width: 24px;
-    margin-right: 10px;
+
+  .name {    
+    margin-left: 5px;
   }
+}
+
+.icon {
+  width: 24px;
 }

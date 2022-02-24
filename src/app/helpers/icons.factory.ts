@@ -20,7 +20,7 @@ export class FsDeviceIconsFactory {
   private _setConfigIcons() {
     this.icons = [
       {
-        name: 'os_androind',
+        name: 'os_android',
         path: '/assets/@firestitch/device/icons/os-android.svg'
       },
       {

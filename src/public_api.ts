@@ -10,3 +10,7 @@ export { FsDeviceOsComponent } from './app/components/os/os.component';
 export { DeviceBrowser } from './app/enums/device-browser.enum';
 export { DeviceOs } from './app/enums/device-os.enum';
 export { DeviceType } from './app/enums/device-type.enum';
+
+
+export { DeviceBrowsers } from './app/consts/device-browsers.const';
+export { DeviceOss } from './app/consts/device-oss.const';
