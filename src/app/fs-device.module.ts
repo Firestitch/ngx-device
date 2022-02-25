@@ -33,23 +33,22 @@ import { FsDeviceIconsFactory } from './helpers/icons.factory';
     FsDeviceBrowserComponent,
     FsDeviceOsComponent,
   ],
-  providers: [
-    // FsComponentService,
-    {
-      provide: APP_INITIALIZER,
-      useFactory: function (iconFactory: FsDeviceIconsFactory) {
-        return () => iconFactory.init();
-      },
-      multi: true,
-      deps: [ FsDeviceIconsFactory ]
-    },
-  ],
+  providers: [],
 })
 export class FsDeviceModule {
   static forRoot(): ModuleWithProviders<FsDeviceModule> {
     return {
       ngModule: FsDeviceModule,
-      // providers: [FsComponentService]
+      providers: [
+        {
+          provide: APP_INITIALIZER,
+          useFactory: function (iconFactory: FsDeviceIconsFactory) {
+            return () => iconFactory.init();
+          },
+          multi: true,
+          deps: [ FsDeviceIconsFactory ]
+        },
+      ]
     };
   }
 }

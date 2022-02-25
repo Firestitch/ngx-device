@@ -30,7 +30,7 @@ const routes: Routes = [
   bootstrap: [ AppComponent ],
   imports: [
     BrowserModule,
-    FsDeviceModule,
+    FsDeviceModule.forRoot(),
     BrowserAnimationsModule,
     AppMaterialModule,
     FormsModule,
