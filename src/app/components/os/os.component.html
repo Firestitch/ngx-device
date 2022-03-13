@@ -4,7 +4,10 @@
 </div>
 
 <ng-template #icon>
-  <div class="icon" [ngClass]="[ 'device-' + type, 'os-' + os ]">
+  <div 
+      class="icon" 
+      [ngClass]="[ 'device-' + type, 'os-' + os ]" 
+      [matTooltip]="DeviceOss[os] + (version ? ' ' + version : '')">
     <img *ngIf="type" class="device" [src]="'/assets/@firestitch/device/devices/' + type + '.svg'">
     <img class="os" [src]="'/assets/@firestitch/device/os/' + (os || 'unknown') + '.svg'">
   </div>  

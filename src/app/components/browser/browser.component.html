@@ -7,6 +7,7 @@
 
 <ng-template #icon>
   <img
+    [matTooltip]="name + (version ? ' ' + version : '')"
     *ngIf="type"
     class="icon"
     src="/assets/@firestitch/device/browsers/browser_{{ type }}.svg">

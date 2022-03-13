@@ -12,6 +12,7 @@ import { FsDeviceBrowserComponent } from './components/browser/browser.component
 import { FsDeviceOsComponent } from './components/os/os.component';
 
 import { FsDeviceIconsFactory } from './helpers/icons.factory';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { FsDeviceIconsFactory } from './helpers/icons.factory';
     FlexLayoutModule,
 
     MatIconModule,
+    MatTooltipModule,
 
     FsListModule,
     FsDateModule,

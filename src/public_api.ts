@@ -14,3 +14,5 @@ export { DeviceType } from './app/enums/device-type.enum';
 
 export { DeviceBrowsers } from './app/consts/device-browsers.const';
 export { DeviceOss } from './app/consts/device-oss.const';
+export { DeviceOsIcons } from './app/consts/device-os-icons.const';
+export { DeviceTypeIcons } from './app/consts/device-type-icons.const';
