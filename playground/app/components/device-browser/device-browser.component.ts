@@ -9,7 +9,14 @@ import { DeviceBrowsers } from '@firestitch/device';
 })
 export class DeviceBrowserComponent {
 
-  public DeviceBrowsers = DeviceBrowsers;
+  public deviceBrowserTypes = [];
 
-  constructor() { }
+  constructor() { 
+    this.deviceBrowserTypes = [
+      ...DeviceBrowsers.map((deviceBrowser) => {
+        return deviceBrowser.type;
+      }),
+      'badtype',
+    ];
+  }
 }

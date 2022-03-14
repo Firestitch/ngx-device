@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Input, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Input, Component, OnChanges, SimpleChanges } from '@angular/core';
 import { DeviceBrowsers } from '../../consts';
 
 import { DeviceBrowser } from '../../enums/device-browser.enum';
@@ -10,7 +10,7 @@ import { DeviceBrowser } from '../../enums/device-browser.enum';
   styleUrls: [ './browser.component.scss' ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FsDeviceBrowserComponent {
+export class FsDeviceBrowserComponent implements OnChanges {
 
   @Input()
   public type: DeviceBrowser = null;
@@ -18,20 +18,18 @@ export class FsDeviceBrowserComponent {
   @Input()
   public version: string = null;
 
-  @Input()
-  public set showName(showName: boolean) {
-    if(showName) {
-      const deviceBrowser = DeviceBrowsers
+  @Input() 
+  public showName = false;
+
+  public deviceBrowser;
+
+  public ngOnChanges(changes: SimpleChanges): void {
+    if(changes.type) {
+      this.deviceBrowser = DeviceBrowsers
         .find((deviceBrowser) => {
-          return deviceBrowser.type === this.type;
+          return deviceBrowser.type === changes.type.currentValue;
         });
-      this.name = deviceBrowser?.name;
     }
-  };
-
-  public name;
-
-  constructor() {
-   }
+  }
 
 }

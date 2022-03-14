@@ -1,14 +1,14 @@
-<ng-container *ngIf="name; else icon">
+<ng-container *ngIf="showName; else icon">
   <div class="icon-name">
     <ng-container *ngTemplateOutlet="icon"></ng-container>
-    <div *ngIf="name" class="name">{{ name }}</div>
+    <div class="name">{{ deviceBrowser?.name || 'Unknown' }}</div>
   </div>
 </ng-container>
 
 <ng-template #icon>
   <img
-    [matTooltip]="name + (version ? ' ' + version : '')"
+    [matTooltip]="(deviceBrowser?.name || 'Unknown') + (version ? ' ' + version : '')"
     *ngIf="type"
     class="icon"
-    src="/assets/@firestitch/device/browsers/browser_{{ type }}.svg">
+    src="/assets/@firestitch/device/browsers/browser_{{ deviceBrowser?.type || 'unknown' }}.svg">
 </ng-template>

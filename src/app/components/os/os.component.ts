@@ -34,7 +34,6 @@ export class FsDeviceOsComponent {
 
   public DeviceTypeIcons = DeviceTypeIcons;
   public DeviceType = DeviceType;
-  public name;
 
   constructor() {
     this.DeviceOss = DeviceOss.reduce((accum, item) => {

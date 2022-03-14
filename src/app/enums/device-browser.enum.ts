@@ -9,4 +9,5 @@ export enum DeviceBrowser {
   Safari = 'safari',
   Samsung = 'samsung',
   Vivaldi = 'vivaldi',
+  DuckDuckGo = 'duckduckgo',
 }

@@ -11,4 +11,5 @@ export const DeviceBrowsers = [
   { name: 'Safari', type: DeviceBrowser.Safari },
   { name: 'Samsung', type: DeviceBrowser.Samsung },
   { name: 'Vivaldi', type: DeviceBrowser.Vivaldi },
+  { name: 'Duck Duck Go', type: DeviceBrowser.DuckDuckGo },
 ];

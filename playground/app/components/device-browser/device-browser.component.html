@@ -1,8 +1,9 @@
 <div fxLayout="column" fxLayoutGap="5px">
-  <ng-container *ngFor="let DeviceBrowser of DeviceBrowsers">
-  <fs-device-browser
-    [type]="DeviceBrowser.type"
-    [showName]="true"
-    [version]="'10.0'">
-  </fs-device-browser>
-</ng-container>
+  <ng-container *ngFor="let deviceBrowserType of deviceBrowserTypes">
+    <fs-device-browser
+      [type]="deviceBrowserType"
+      [showName]="true"
+      [version]="'10.0'">
+    </fs-device-browser>
+  </ng-container>
+</div>
