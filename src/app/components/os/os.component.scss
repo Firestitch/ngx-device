@@ -4,14 +4,14 @@
   align-items: center;
 }
 
-
 .icon {
   position: relative;
   width: max-content;
+  display: flex;
 
   &.device-mobile .os,
   &.device-tablet .os {
-    top: 41%;
+    top: 30%;
   }
 
   img.device {
@@ -20,9 +20,9 @@
 
   img.os {
     position: absolute;
-    top: 32%;
+    top: 21%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,0);
     height: 31%;
   }
 }

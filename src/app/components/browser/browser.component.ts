@@ -19,7 +19,13 @@ export class FsDeviceBrowserComponent implements OnChanges {
   public version: string = null;
 
   @Input() 
-  public showName = false;
+  public showName = true;
+  
+  @Input() 
+  public iconSize = 24;
+
+  @Input() 
+  public showIcon = true;
 
   public deviceBrowser;
 
