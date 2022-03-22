@@ -6,8 +6,6 @@
 
 .icon {
   position: relative;
-  width: max-content;
-  display: flex;
 
   &.device-mobile .os,
   &.device-tablet .os {
@@ -16,6 +14,7 @@
 
   img.device {
     width: 24px;
+    vertical-align: bottom;
   }
 
   img.os {

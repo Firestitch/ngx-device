@@ -7,5 +7,4 @@ export const DeviceOss = [
   { name: 'Mac', type: DeviceOs.Mac },
   { name: 'Windows', type: DeviceOs.Windows },
   { name: 'Darwin', type: DeviceOs.Darwin },
-
 ];
