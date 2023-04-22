@@ -4,11 +4,19 @@
 </div>
 
 <ng-template #icon>
-  <div 
-      class="icon" 
-      [ngClass]="[ 'device-' + type, 'os-' + os ]" 
-      [matTooltip]="(DeviceOss[os] || 'Unknown') + (version ? ' ' + version : '')">
-    <img *ngIf="type" class="device" [src]="'/assets/@firestitch/device/devices/' + type + '.svg'">
-    <img class="os" [src]="'/assets/@firestitch/device/os/' + (os || 'unknown') + '.svg'">
-  </div>  
+  <fs-popover [template]="popover" theme="dark"  size="small">
+    <div 
+        class="icon" 
+        [ngClass]="[ 'device-' + type, 'os-' + os ]" >
+      <img *ngIf="type" class="device" [src]="'/assets/@firestitch/device/devices/' + type + '.svg'">
+      <img class="os" [src]="'/assets/@firestitch/device/os/' + (os || 'unknown') + '.svg'">
+    </div> 
+  </fs-popover>
+</ng-template>
+
+<ng-template #popover>
+  {{(DeviceOss[os] || 'Unknown') + (version ? ' ' + version : '')}}
+  <div *ngFor="let item of metas">
+    {{item.name}}: {{item.value}}
+  </div>
 </ng-template>
