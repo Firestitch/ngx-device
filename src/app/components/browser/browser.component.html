@@ -14,14 +14,21 @@
 </ng-container>
 
 <ng-template #icon>
-  <img
-    *ngIf="type"
-    [matTooltip]="(deviceBrowser?.name || 'Unknown') + (version ? ' ' + version : '')"
-    [style.width]="iconSize + 'px'"
-    class="icon"
-    src="/assets/@firestitch/device/browsers/browser_{{ deviceBrowser?.type || 'unknown' }}.svg">
+  <fs-popover [template]="popover" theme="dark" size="small">
+    <img
+      *ngIf="type"
+      [matTooltip]=""
+      [style.width]="iconSize + 'px'"
+      class="icon"
+      src="/assets/@firestitch/device/browsers/browser_{{ deviceBrowser?.type || 'unknown' }}.svg">
+  </fs-popover>
 </ng-template>
 
 <ng-template #name>
   {{ deviceBrowser?.name || 'Unknown' }}
+</ng-template>
+
+
+<ng-template #popover>
+  {{(deviceBrowser?.name || 'Unknown') + (version ? ' ' + version : '')}}
 </ng-template>
