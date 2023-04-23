@@ -1,0 +1,14 @@
+
+<fs-popover [template]="popover" theme="dark" size="small" [indication]="false">
+  <div 
+      class="icon">
+    <img [src]="'/assets/@firestitch/device/cordova.png'">
+  </div> 
+</fs-popover>
+
+<ng-template #popover>
+  {{version}}
+  <div *ngFor="let item of metas">
+    {{item.name}}: {{item.value}}
+  </div>
+</ng-template>

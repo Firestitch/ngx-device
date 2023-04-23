@@ -9,11 +9,9 @@ import { FsDateModule } from '@firestitch/date';
 import { FsCountryModule } from '@firestitch/country';
 import { FsPopoverModule } from '@firestitch/popover';
 
-import { FsDeviceBrowserComponent } from './components/browser/browser.component';
-import { FsDeviceOsComponent } from './components/os/os.component';
-
 import { FsDeviceIconsFactory } from './helpers/icons.factory';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { FsDeviceCordovaComponent, FsDeviceBrowserComponent, FsDeviceOsComponent } from './components';
 
 
 @NgModule({
@@ -32,10 +30,12 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   exports: [
     FsDeviceBrowserComponent,
     FsDeviceOsComponent,
+    FsDeviceCordovaComponent,
   ],
   declarations: [
     FsDeviceBrowserComponent,
     FsDeviceOsComponent,
+    FsDeviceCordovaComponent,
   ],
   providers: [],
 })
