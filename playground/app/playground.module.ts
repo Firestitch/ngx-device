@@ -8,14 +8,12 @@ import { FsExampleModule } from '@firestitch/example';
 import { FsMessageModule } from '@firestitch/message';
 import { FsDeviceModule } from '@firestitch/device';
 import { FsLabelModule } from '@firestitch/label';
-import { FsFormModule } from '@firestitch/form';
 import { FsStoreModule } from '@firestitch/store';
 
 import { ToastrModule } from 'ngx-toastr';
 
 import { AppMaterialModule } from './material.module';
 import {
-  KitchenSinkComponent,
   ExamplesComponent
 } from './components';
 import { AppComponent } from './app.component';
@@ -35,7 +33,6 @@ const routes: Routes = [
     AppMaterialModule,
     FormsModule,
     FsLabelModule,
-    // FsFormModule,
     FsStoreModule,
     FsExampleModule.forRoot(),
     FsMessageModule.forRoot(),
@@ -45,7 +42,6 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     ExamplesComponent,
-    // KitchenSinkComponent,
     DeviceBrowserComponent,
     DeviceOsComponent,
   ],

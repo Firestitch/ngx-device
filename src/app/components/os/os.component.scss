@@ -13,17 +13,27 @@
     top: 30%;
   }
 
-  img.device {
-    width: 24px;
-    vertical-align: bottom;
+  &.os-unknown.device-unknown {
+    .os {
+      height: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
-  img.os {
-    position: absolute;
-    top: 21%;
-    left: 50%;
-    transform: translate(-50%,0);
-    height: 31%;
+  img {
+    &.device {
+      width: 24px;
+      vertical-align: bottom;
+    }
+
+    &.os {
+      position: absolute;
+      top: 21%;
+      left: 50%;
+      transform: translate(-50%,0);
+      height: 31%;
+    }
   }
 }
 

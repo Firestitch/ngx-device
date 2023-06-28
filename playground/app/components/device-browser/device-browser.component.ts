@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { DeviceBrowsers } from '@firestitch/device';
 
+
 @Component({
   selector: 'device-browser',
   templateUrl: './device-browser.component.html',

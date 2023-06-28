@@ -7,8 +7,8 @@
   <fs-popover [template]="popover" theme="dark" size="small" [indication]="false">
     <div 
         class="icon" 
-        [ngClass]="[ 'device-' + type, 'os-' + os ]" >
-      <img *ngIf="type" class="device" [src]="'/assets/@firestitch/device/devices/' + type + '.svg'">
+        [ngClass]="[ 'device-' + (type || 'unknown') , 'os-' + (os || 'unknown') ]" >
+      <img class="device" [src]="'/assets/@firestitch/device/devices/' + (type || 'unknown') + '.svg'">
       <img class="os" [src]="'/assets/@firestitch/device/os/' + (os || 'unknown') + '.svg'">
     </div> 
   </fs-popover>
