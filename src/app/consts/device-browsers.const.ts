@@ -12,4 +12,5 @@ export const DeviceBrowsers = [
   { name: 'Samsung', type: DeviceBrowser.Samsung },
   { name: 'Vivaldi', type: DeviceBrowser.Vivaldi },
   { name: 'Duck Duck Go', type: DeviceBrowser.DuckDuckGo },
+  { name: 'Cordova', type: DeviceBrowser.Cordova },
 ];
