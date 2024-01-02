@@ -1,23 +1,23 @@
-import { NgModule, ModuleWithProviders, APP_INITIALIZER } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { APP_INITIALIZER, ModuleWithProviders, NgModule } from '@angular/core';
 
 import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
-import { FsListModule } from '@firestitch/list';
-import { FsDateModule } from '@firestitch/date';
 import { FsCountryModule } from '@firestitch/country';
+import { FsDateModule } from '@firestitch/date';
+import { FsListModule } from '@firestitch/list';
 import { FsPopoverModule } from '@firestitch/popover';
 
+import {
+  FsDeviceBrowserComponent, FsDeviceCordovaComponent, FsDeviceOsComponent,
+} from './components';
 import { FsDeviceIconsFactory } from './helpers/icons.factory';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { FsDeviceCordovaComponent, FsDeviceBrowserComponent, FsDeviceOsComponent } from './components';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    FlexLayoutModule,
 
     MatIconModule,
     MatTooltipModule,
@@ -40,19 +40,19 @@ import { FsDeviceCordovaComponent, FsDeviceBrowserComponent, FsDeviceOsComponent
   providers: [],
 })
 export class FsDeviceModule {
-  static forRoot(): ModuleWithProviders<FsDeviceModule> {
+  public static forRoot(): ModuleWithProviders<FsDeviceModule> {
     return {
       ngModule: FsDeviceModule,
       providers: [
         {
           provide: APP_INITIALIZER,
-          useFactory: function (iconFactory: FsDeviceIconsFactory) {
+          useFactory (iconFactory: FsDeviceIconsFactory) {
             return () => iconFactory.init();
           },
           multi: true,
-          deps: [ FsDeviceIconsFactory ]
+          deps: [FsDeviceIconsFactory],
         },
-      ]
+      ],
     };
   }
 }
