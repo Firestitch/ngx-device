@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { DeviceBrowsers } from '@firestitch/device';
 
@@ -6,7 +6,8 @@ import { DeviceBrowsers } from '@firestitch/device';
 @Component({
   selector: 'device-browser',
   templateUrl: './device-browser.component.html',
-  styleUrls: ['./device-browser.component.scss']
+  styleUrls: ['./device-browser.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DeviceBrowserComponent {
 

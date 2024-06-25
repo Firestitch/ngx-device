@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { DeviceType, DeviceOs, DeviceOss } from '@firestitch/device';
+import { DeviceOs, DeviceOss, DeviceType } from '@firestitch/device';
 
 @Component({
   selector: 'device-os',
   templateUrl: './device-os.component.html',
-  styleUrls: ['./device-os.component.scss']
+  styleUrls: ['./device-os.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DeviceOsComponent {
 
