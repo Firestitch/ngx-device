@@ -1,0 +1,12 @@
+<ul>
+  <ng-container *ngFor="let name of names">
+    <li>
+      <ng-container *ngIf="objects[name]; else text">
+        {{name|osMetaName}}:<fs-device-os-meta [meta]="meta[name]"></fs-device-os-meta>
+      </ng-container>
+      <ng-template #text>
+          {{name|osMetaName}}: {{meta[name]}}  
+      </ng-template>
+    </li>
+  </ng-container>
+</ul>

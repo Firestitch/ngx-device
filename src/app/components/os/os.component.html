@@ -15,8 +15,8 @@
 </ng-template>
 
 <ng-template #popover>
-  {{(DeviceOss[os] || 'Unknown') + (version ? ' ' + version : '')}}
-  <div *ngFor="let item of metas">
-    {{item.name}}: {{item.value}}
+  <div>
+    {{(DeviceOss[os] || 'Unknown') + (version ? ' ' + version : '')}}
   </div>
+  <fs-device-os-meta [meta]="meta"></fs-device-os-meta>
 </ng-template>

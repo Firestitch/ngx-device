@@ -14,5 +14,4 @@ export class DeviceOsComponent {
   public DeviceOs = DeviceOs;
   public DeviceOss = DeviceOss;
 
-  constructor() { }
 }

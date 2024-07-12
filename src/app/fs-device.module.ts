@@ -11,6 +11,8 @@ import { FsPopoverModule } from '@firestitch/popover';
 
 import {
   FsDeviceBrowserComponent, FsDeviceCordovaComponent, FsDeviceOsComponent,
+  FsDeviceOsMetaComponent,
+  OsMetaNamePipe,
 } from './components';
 import { FsDeviceIconsFactory } from './helpers/icons.factory';
 
@@ -36,8 +38,9 @@ import { FsDeviceIconsFactory } from './helpers/icons.factory';
     FsDeviceBrowserComponent,
     FsDeviceOsComponent,
     FsDeviceCordovaComponent,
+    FsDeviceOsMetaComponent,
+    OsMetaNamePipe,
   ],
-  providers: [],
 })
 export class FsDeviceModule {
   public static forRoot(): ModuleWithProviders<FsDeviceModule> {
