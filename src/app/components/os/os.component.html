@@ -8,8 +8,8 @@
     <div 
         class="icon" 
         [ngClass]="[ 'device-' + (type || 'unknown') , 'os-' + (os || 'unknown') ]" >
-      <img class="device" [src]="'/assets/@firestitch/device/devices/' + (type || 'unknown') + '.svg'">
-      <img class="os" [src]="'/assets/@firestitch/device/os/' + (os || 'unknown') + '.svg'">
+      <img class="device" [src]="'/assets/device/devices/' + (type || 'unknown') + '.svg'">
+      <img class="os" [src]="'/assets/device/os/' + (os || 'unknown') + '.svg'">
     </div> 
   </fs-popover>
 </ng-template>
