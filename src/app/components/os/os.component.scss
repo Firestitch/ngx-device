@@ -1,42 +1,7 @@
-.icon-name {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
+img {
+  display: inline-flex;
 
-.icon {
-  position: relative;
-  width: fit-content;
-
-  &.device-mobile .os,
-  &.device-tablet .os {
-    top: 30%;
+  &.ios, &.mac {
+    filter: invert(1);
   }
-
-  &.os-unknown.device-unknown {
-    .os {
-      height: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
-
-  img {
-    &.device {
-      width: 24px;
-      vertical-align: bottom;
-    }
-
-    &.os {
-      position: absolute;
-      top: 21%;
-      left: 50%;
-      transform: translate(-50%,0);
-      height: 31%;
-    }
-  }
-}
-
-.name {
-  margin-left: 10px;
 }

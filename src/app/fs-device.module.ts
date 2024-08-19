@@ -12,6 +12,7 @@ import { FsPopoverModule } from '@firestitch/popover';
 import {
   FsDeviceBrowserComponent, FsDeviceCordovaComponent, FsDeviceOsComponent,
   FsDeviceOsMetaComponent,
+  FsOsComponent,
   OsMetaNamePipe,
 } from './components';
 import { FsDeviceIconsFactory } from './helpers/icons.factory';
@@ -33,6 +34,7 @@ import { FsDeviceIconsFactory } from './helpers/icons.factory';
     FsDeviceBrowserComponent,
     FsDeviceOsComponent,
     FsDeviceCordovaComponent,
+    FsOsComponent,
   ],
   declarations: [
     FsDeviceBrowserComponent,
@@ -40,6 +42,7 @@ import { FsDeviceIconsFactory } from './helpers/icons.factory';
     FsDeviceCordovaComponent,
     FsDeviceOsMetaComponent,
     OsMetaNamePipe,
+    FsOsComponent,
   ],
 })
 export class FsDeviceModule {

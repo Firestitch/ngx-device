@@ -1,6 +1,6 @@
 export { FsDeviceModule } from './app/fs-device.module';
 
-export { FsDeviceBrowserComponent, FsDeviceCordovaComponent, FsDeviceOsComponent } from './app/components';
+export { FsDeviceBrowserComponent, FsDeviceCordovaComponent, FsDeviceOsComponent, FsOsComponent } from './app/components';
 
 export { DeviceBrowser } from './app/enums/device-browser.enum';
 export { DeviceOs } from './app/enums/device-os.enum';
