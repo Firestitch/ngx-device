@@ -1,23 +1,16 @@
-import { UAParser } from 'ua-parser-js';
+import { IResult, UAParser } from 'ua-parser-js';
 
-export function getDevice(userAgent): { 
+export function getDevice(userAgent: string): { 
   mobile: boolean,
-  type: string,
-  vendor: string,
-  model: string,
-} {
+} & IResult {
   const parser = new UAParser(userAgent);
-
   const parserResults = parser.getResult();
-
   const mobile = ['mobile', 'tablet', 'smarttv', 'wearable', 'embedded']
     .includes(parserResults?.device.type);
   
   return {
     mobile,
-    type: parserResults?.device.type || null,
-    vendor: parserResults?.device.vendor || null,
-    model: parserResults?.device.model || null,
+    ...parserResults,
   };
 }
 

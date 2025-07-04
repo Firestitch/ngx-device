@@ -2,7 +2,7 @@
   "name": "@firestitch/device",
   "title": "Device",
   "description": "@firestitch/device",
-  "version": "18.0.0",
+  "version": "18.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/Firestitch/ngx-device"
@@ -86,7 +86,6 @@
     "node": ">=6.0.0"
   },
   "dependencies": {
-    "tslib": "^2.0.0",
-    "ua-parser-js": "^1.0.38"
+    "ua-parser-js": "^2.0.4"
   }
 }
