@@ -1,7 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 
-@Pipe({ name: 'osMetaName' })
+@Pipe({
+    name: 'osMetaName',
+    standalone: true
+})
 export class OsMetaNamePipe implements PipeTransform {
   public transform(name) {
 

@@ -1,11 +1,14 @@
 import { ChangeDetectionStrategy, Input, Component, OnInit } from '@angular/core';
+import { FsPopoverModule } from '@firestitch/popover';
 
 
 @Component({
-  selector: 'fs-device-cordova',
-  templateUrl: './cordova.component.html',
-  styleUrls: [ './cordova.component.scss' ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'fs-device-cordova',
+    templateUrl: './cordova.component.html',
+    styleUrls: ['./cordova.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [FsPopoverModule],
 })
 export class FsDeviceCordovaComponent implements OnInit {
 

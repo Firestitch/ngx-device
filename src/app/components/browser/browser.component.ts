@@ -2,13 +2,22 @@ import { ChangeDetectionStrategy, Input, Component, OnChanges, SimpleChanges } f
 import { DeviceBrowsers } from '../../consts';
 
 import { DeviceBrowser } from '../../enums/device-browser.enum';
+import { NgTemplateOutlet } from '@angular/common';
+import { FsPopoverModule } from '@firestitch/popover';
+import { MatTooltip } from '@angular/material/tooltip';
 
 
 @Component({
-  selector: 'fs-device-browser',
-  templateUrl: './browser.component.html',
-  styleUrls: [ './browser.component.scss' ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'fs-device-browser',
+    templateUrl: './browser.component.html',
+    styleUrls: ['./browser.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [
+        NgTemplateOutlet,
+        FsPopoverModule,
+        MatTooltip,
+    ],
 })
 export class FsDeviceBrowserComponent implements OnChanges {
 

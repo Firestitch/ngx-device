@@ -19,31 +19,27 @@ import { FsDeviceIconsFactory } from './helpers/icons.factory';
 
 
 @NgModule({
-  imports: [
-    CommonModule,
-
-    MatIconModule,
-    MatTooltipModule,
-
-    FsListModule,
-    FsDateModule,
-    FsCountryModule,
-    FsPopoverModule,
-  ],
-  exports: [
-    FsDeviceBrowserComponent,
-    FsDeviceOsComponent,
-    FsDeviceCordovaComponent,
-    FsOsComponent,
-  ],
-  declarations: [
-    FsDeviceBrowserComponent,
-    FsDeviceOsComponent,
-    FsDeviceCordovaComponent,
-    FsDeviceOsMetaComponent,
-    OsMetaNamePipe,
-    FsOsComponent,
-  ],
+    imports: [
+        CommonModule,
+        MatIconModule,
+        MatTooltipModule,
+        FsListModule,
+        FsDateModule,
+        FsCountryModule,
+        FsPopoverModule,
+        FsDeviceBrowserComponent,
+        FsDeviceOsComponent,
+        FsDeviceCordovaComponent,
+        FsDeviceOsMetaComponent,
+        OsMetaNamePipe,
+        FsOsComponent,
+    ],
+    exports: [
+        FsDeviceBrowserComponent,
+        FsDeviceOsComponent,
+        FsDeviceCordovaComponent,
+        FsOsComponent,
+    ],
 })
 export class FsDeviceModule {
   public static forRoot(): ModuleWithProviders<FsDeviceModule> {

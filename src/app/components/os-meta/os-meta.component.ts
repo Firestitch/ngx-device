@@ -1,11 +1,14 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { OsMetaNamePipe } from './os-meta-name.pipe';
 
 
 @Component({
-  selector: 'fs-device-os-meta',
-  templateUrl: './os-meta.component.html',
-  styleUrls: ['./os-meta.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'fs-device-os-meta',
+    templateUrl: './os-meta.component.html',
+    styleUrls: ['./os-meta.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [OsMetaNamePipe],
 })
 export class FsDeviceOsMetaComponent implements OnInit {
 
