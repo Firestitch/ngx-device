@@ -1,34 +1,35 @@
-<ng-container *ngIf="showName && showIcon">
+@if (showName && showIcon) {
   <div class="icon-name">
     <ng-container *ngTemplateOutlet="icon"></ng-container>
     <span class="name"><ng-container *ngTemplateOutlet="name"></ng-container></span>
   </div>
-</ng-container>
+}
 
-<ng-container *ngIf="showName && !showIcon">
+@if (showName && !showIcon) {
   <ng-container *ngTemplateOutlet="name"></ng-container>
-</ng-container>
+}
 
-<ng-container *ngIf="!showName && showIcon">
+@if (!showName && showIcon) {
   <ng-container *ngTemplateOutlet="icon"></ng-container>
-</ng-container>
+}
 
 <ng-template #icon>
   <fs-popover [template]="popover" theme="dark" size="small" [indication]="false">
-    <img
-      *ngIf="type"
-      [matTooltip]=""
-      [style.width]="iconSize + 'px'"
-      class="icon"
-      [src]="'/assets/device/browsers/' + (deviceBrowser?.type || 'unknown') + '.svg'">
-  </fs-popover>
-</ng-template>
+    @if (type) {
+      <img
+        [matTooltip]=""
+        [style.width]="iconSize + 'px'"
+        class="icon"
+        [src]="'/assets/device/browsers/' + (deviceBrowser?.type || 'unknown') + '.svg'">
+      }
+    </fs-popover>
+  </ng-template>
 
-<ng-template #name>
-  {{ deviceBrowser?.name || 'Unknown' }}
-</ng-template>
+  <ng-template #name>
+    {{ deviceBrowser?.name || 'Unknown' }}
+  </ng-template>
 
 
-<ng-template #popover>
-  {{(deviceBrowser?.name || 'Unknown') + (version ? ' ' + version : '')}}
-</ng-template>
+  <ng-template #popover>
+    {{(deviceBrowser?.name || 'Unknown') + (version ? ' ' + version : '')}}
+  </ng-template>

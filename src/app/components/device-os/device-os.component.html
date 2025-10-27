@@ -1,16 +1,27 @@
-<div class="icon-name" *ngIf="showName; else icon">
-  <ng-container *ngTemplateOutlet="icon"></ng-container>
-  <div class="name">{{ DeviceOss[os] || 'Unknown' }}</div>
-</div>
+@if (showName) {
+  <div class="icon-name">
+    <ng-container *ngTemplateOutlet="icon"></ng-container>
+    <div class="name">{{ DeviceOss[os] || 'Unknown' }}</div>
+  </div>
+} @else {
+  <fs-popover [template]="popover" theme="dark" size="small" [indication]="false">
+    <div
+      class="icon"
+      [ngClass]="[ 'device-' + (type || 'unknown') , 'os-' + (os || 'unknown') ]" >
+      <img class="device" [src]="'/assets/device/devices/' + (type || 'unknown') + '.svg'">
+      <img class="os" [src]="'/assets/device/os/' + (os || 'unknown') + '.svg'">
+    </div>
+  </fs-popover>
+}
 
 <ng-template #icon>
   <fs-popover [template]="popover" theme="dark" size="small" [indication]="false">
-    <div 
-        class="icon" 
-        [ngClass]="[ 'device-' + (type || 'unknown') , 'os-' + (os || 'unknown') ]" >
+    <div
+      class="icon"
+      [ngClass]="[ 'device-' + (type || 'unknown') , 'os-' + (os || 'unknown') ]" >
       <img class="device" [src]="'/assets/device/devices/' + (type || 'unknown') + '.svg'">
       <img class="os" [src]="'/assets/device/os/' + (os || 'unknown') + '.svg'">
-    </div> 
+    </div>
   </fs-popover>
 </ng-template>
 

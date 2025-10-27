@@ -1,5 +1,5 @@
 <div class="fs-row.gap-md.wrap">
-  <ng-container *ngFor="let deviceOs of DeviceOss">
+  @for (deviceOs of DeviceOss; track deviceOs) {
     <fs-os [os]="deviceOs.type"></fs-os>
-  </ng-container>
+  }
 </div>

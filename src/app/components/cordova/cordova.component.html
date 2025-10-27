@@ -1,14 +1,16 @@
 
 <fs-popover [template]="popover" theme="dark" size="small" [indication]="false">
-  <div 
-      class="icon">
+  <div
+    class="icon">
     <img [src]="'/assets/device/cordova.png'">
-  </div> 
+  </div>
 </fs-popover>
 
 <ng-template #popover>
   {{version}}
-  <div *ngFor="let item of metas">
-    {{item.name}}: {{item.value}}
-  </div>
+  @for (item of metas; track item) {
+    <div>
+      {{item.name}}: {{item.value}}
+    </div>
+  }
 </ng-template>
