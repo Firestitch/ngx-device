@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
 import { MatIconRegistry } from '@angular/material/icon';
@@ -6,12 +6,10 @@ import { MatIconRegistry } from '@angular/material/icon';
 
 @Injectable({ providedIn: 'root' })
 export class FsDeviceIconsFactory {
-  public icons = [];
+  private _matIconRegistory = inject(MatIconRegistry);
+  private _domSanitizer = inject(DomSanitizer);
 
-  constructor(
-    private _matIconRegistory: MatIconRegistry,
-    private _domSanitizer: DomSanitizer,
-  ) { }
+  public icons = [];
 
   public init() {
     this._setConfigIcons();
