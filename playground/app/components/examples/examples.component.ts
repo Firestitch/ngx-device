@@ -4,6 +4,7 @@ import { FsExampleModule } from '@firestitch/example';
 import { DeviceBrowserComponent } from '../device-browser/device-browser.component';
 import { DeviceOsComponent } from '../device-os/device-os.component';
 import { OsComponent } from '../os/os.component';
+import { PlatformComponent } from '../platform/platform.component';
 import { CurrentDeviceComponent } from '../current-device/current-device.component';
 
 
@@ -16,6 +17,7 @@ import { CurrentDeviceComponent } from '../current-device/current-device.compone
         DeviceBrowserComponent,
         DeviceOsComponent,
         OsComponent,
+        PlatformComponent,
         CurrentDeviceComponent,
     ],
 })

@@ -12,6 +12,7 @@ import { FsPopoverModule } from '@firestitch/popover';
 import {
   FsDeviceBrowserComponent, FsDeviceCordovaComponent, FsDeviceOsComponent,
   FsDeviceOsMetaComponent,
+  FsDevicePlatformComponent,
   FsOsComponent,
   OsMetaNamePipe,
 } from './components';
@@ -19,27 +20,30 @@ import { FsDeviceIconsFactory } from './helpers/icons.factory';
 
 
 @NgModule({
-    imports: [
-        CommonModule,
-        MatIconModule,
-        MatTooltipModule,
-        FsListModule,
-        FsDateModule,
-        FsCountryModule,
-        FsPopoverModule,
-        FsDeviceBrowserComponent,
-        FsDeviceOsComponent,
-        FsDeviceCordovaComponent,
-        FsDeviceOsMetaComponent,
-        OsMetaNamePipe,
-        FsOsComponent,
-    ],
-    exports: [
-        FsDeviceBrowserComponent,
-        FsDeviceOsComponent,
-        FsDeviceCordovaComponent,
-        FsOsComponent,
-    ],
+  imports: [
+    CommonModule,
+    MatIconModule,
+    MatTooltipModule,
+    FsListModule,
+    FsDateModule,
+    FsCountryModule,
+    FsPopoverModule,
+    FsDeviceBrowserComponent,
+    FsDeviceOsComponent,
+    FsDeviceCordovaComponent,
+    FsDeviceOsMetaComponent,
+    OsMetaNamePipe,
+        
+    FsDevicePlatformComponent,
+    FsOsComponent,
+  ],
+  exports: [
+    FsDeviceBrowserComponent,
+    FsDeviceOsComponent,
+    FsDevicePlatformComponent,
+    FsDeviceCordovaComponent,
+    FsOsComponent,
+  ],
 })
 export class FsDeviceModule {
   public static forRoot(): ModuleWithProviders<FsDeviceModule> {

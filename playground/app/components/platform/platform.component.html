@@ -1,0 +1,5 @@
+<div class="fs-row.gap-md.wrap">
+  @for (devicePlatform of DevicePlatforms; track devicePlatform) {
+    <fs-device-platform [type]="devicePlatform.type"></fs-device-platform>
+  }
+</div>

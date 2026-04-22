@@ -1,0 +1,34 @@
+<ng-container *ngIf="showName && showIcon">
+  <div class="icon-name">
+    <ng-container *ngTemplateOutlet="icon"></ng-container>
+    <span class="name">
+      <ng-container *ngTemplateOutlet="name"></ng-container>
+    </span>
+  </div>
+</ng-container>
+<ng-container *ngIf="showName && !showIcon">
+  <ng-container *ngTemplateOutlet="name"></ng-container>
+</ng-container>
+<ng-container *ngIf="!showName && showIcon">
+  <ng-container *ngTemplateOutlet="icon"></ng-container>
+</ng-container>
+<ng-template #icon>
+  <fs-popover
+      [template]="popover"
+      theme="dark"
+      size="small"
+      [indication]="false">
+    <img
+      *ngIf="type"
+      [style.width]="iconSize + 'px'"
+      [style.height]="iconSize + 'px'"
+      class="icon"
+      [src]="'/assets/device/platforms/' + (devicePlatform?.type || 'unknown') + '.svg'">
+  </fs-popover>
+</ng-template>
+<ng-template #name>
+  {{ devicePlatform?.name || 'Unknown' }}
+</ng-template>
+<ng-template #popover>
+  {{ devicePlatform?.name || 'Unknown' }}
+</ng-template>
