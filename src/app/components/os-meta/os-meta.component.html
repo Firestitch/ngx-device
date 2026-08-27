@@ -1,11 +1,14 @@
-<ul>
-  @for (name of names; track name) {
-    <li>
-      @if (objects[name]) {
-        {{name|osMetaName}}:<fs-device-os-meta [meta]="meta[name]"></fs-device-os-meta>
-      } @else {
-        {{name|osMetaName}}: {{meta[name]}}
-      }
-    </li>
-  }
-</ul>
+@if (names.length) {
+  <ul>
+    @for (name of names; track name) {
+      <li>
+        @if (objects[name]) {
+          {{ name|osMetaName }}:
+          <fs-device-os-meta [meta]="meta[name]"></fs-device-os-meta>
+        } @else {
+          {{ name|osMetaName }}: {{ meta[name] }}
+        }
+      </li>
+    }
+  </ul>
+}

@@ -1,27 +1,28 @@
+import { NgClass, NgTemplateOutlet } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+
+import { FsPopoverModule } from '@firestitch/popover';
 
 import { DeviceOsIcons } from '../../consts/device-os-icons.const';
 import { DeviceOss } from '../../consts/device-oss.const';
 import { DeviceTypeIcons } from '../../consts/device-type-icons.const';
 import { DeviceOs } from '../../enums/device-os.enum';
 import { DeviceType } from '../../enums/device-type.enum';
-import { NgTemplateOutlet, NgClass } from '@angular/common';
-import { FsPopoverModule } from '@firestitch/popover';
 import { FsDeviceOsMetaComponent } from '../os-meta/os-meta.component';
 
 
 @Component({
-    selector: 'fs-device-os',
-    templateUrl: './device-os.component.html',
-    styleUrls: ['./device-os.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
-        NgTemplateOutlet,
-        FsPopoverModule,
-        NgClass,
-        FsDeviceOsMetaComponent,
-    ],
+  selector: 'fs-device-os',
+  templateUrl: './device-os.component.html',
+  styleUrls: ['./device-os.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [
+    NgTemplateOutlet,
+    FsPopoverModule,
+    NgClass,
+    FsDeviceOsMetaComponent,
+  ],
 })
 export class FsDeviceOsComponent implements OnInit {
 
